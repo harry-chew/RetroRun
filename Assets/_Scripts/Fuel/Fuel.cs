@@ -6,7 +6,20 @@ public class Fuel : MonoBehaviour
     public static Action<float> OnFuelChanged;
     [SerializeField] private float fuel = 100f;
     [SerializeField] private bool isFuelRunning = false;
+    
+    public static Fuel Instance { get; private set; }
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
