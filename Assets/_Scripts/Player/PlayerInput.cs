@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public static event Action<int> OnDirectionChange;
+    public static event Action<float> OnDirectionChange;
 
-    public int dir = 0;
+    public float dir = 0;
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.A))
@@ -18,6 +18,6 @@ public class PlayerInput : MonoBehaviour
             dir = 1;
             OnDirectionChange?.Invoke(dir);
         }
-        dir = 0;
+        //dir = 0;
     }
 }
