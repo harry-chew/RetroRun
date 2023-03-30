@@ -9,7 +9,7 @@ public class PlayerCollisions : MonoBehaviour
         if(col.GetComponent<IPickUp>() != null)
         {
             col.GetComponent<IPickUp>().Collect();
-            Destroy(col.gameObject);
+            
         }
         
     }
