@@ -11,7 +11,6 @@ public class UpdateScoreMultiplierUI : MonoBehaviour
 
     private void UpdateScoreMultiplier(float scoreMultiplier)
     {
-        int scoreMultiplierInt = (int)scoreMultiplier;
-        scoreMultiplierText.text = scoreMultiplierInt.ToString() + "x";
+        scoreMultiplierText.text = scoreMultiplier.ToString("F1") + "x";
     }
 }

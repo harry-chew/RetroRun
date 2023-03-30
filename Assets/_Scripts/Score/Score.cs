@@ -27,7 +27,7 @@ public class Score : MonoBehaviour
         if (scoreMultiplier > 1.0f)
         {
             scoreMultiplier -= Time.deltaTime;
-            OnScoreMultiplierChanged?.Invoke((int)scoreMultiplier);
+            OnScoreMultiplierChanged?.Invoke(scoreMultiplier);
         }
         else 
             scoreMultiplier = 1.0f;
@@ -38,6 +38,7 @@ public class Score : MonoBehaviour
     public void IncrementScoreMultiplier()
     {
         scoreMultiplier *= 2f;
+        OnScoreMultiplierChanged?.Invoke(scoreMultiplier);
     }
 
 

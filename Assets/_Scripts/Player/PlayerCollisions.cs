@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollisions : MonoBehaviour
@@ -9,8 +7,6 @@ public class PlayerCollisions : MonoBehaviour
         if(col.GetComponent<IPickUp>() != null)
         {
             col.GetComponent<IPickUp>().Collect();
-            
-        }
-        
+        }   
     }
 }
