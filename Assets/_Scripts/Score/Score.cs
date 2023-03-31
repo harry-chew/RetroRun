@@ -32,7 +32,7 @@ public class Score : MonoBehaviour
         else 
             scoreMultiplier = 1.0f;
         
-        
+        AddScore(Time.deltaTime);
     }
 
     public void IncrementScoreMultiplier()
@@ -45,6 +45,11 @@ public class Score : MonoBehaviour
     public void AddScore(float scoreToAdd)
     {
         score += scoreToAdd * scoreMultiplier;
+    }
+
+    public float GetScore()
+    {
+        return score;
     }
 
 }
